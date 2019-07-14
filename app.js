@@ -5,6 +5,7 @@
 
 const bISBN = new ISBN;
 
+const ui = new UI;
 
 document.querySelector("#btnSearchBook").addEventListener("click", () => {
 
@@ -13,7 +14,7 @@ document.querySelector("#btnSearchBook").addEventListener("click", () => {
 
   bISBN.getBook(inputValue)
     .then(data =>  {
-      console.log(data);
+      ui.showBook(data, inputValue);
     })
 
 

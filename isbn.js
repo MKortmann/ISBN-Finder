@@ -10,7 +10,7 @@ class ISBN {
   async getBook(isbn) {
 
     const bookResponse = await fetch(`https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&format=json`);
-    debugger
+
     const book = await bookResponse.json();
 
     return book;
